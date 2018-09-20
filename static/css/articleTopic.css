@@ -120,6 +120,9 @@ i {
 .nav-list li a{
     color: #7f7f7f;
 }
+.nav-list li>a:hover,.nav-list li h3 a:hover{
+    color: #fd007f;
+}
 
 
 .contentbg {
