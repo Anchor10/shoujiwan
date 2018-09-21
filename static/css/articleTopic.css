@@ -871,3 +871,29 @@ i {
     background: #e54c3d;
     text-decoration: none
 }
+
+.num-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid #6ec31c;
+    border-right: 50px solid transparent;
+}
+
+.game-num {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font: italic 18px Impact;
+    color: #fff;
+    z-index: 100;
+    word-break: normal;
+    word-wrap: normal;
+}

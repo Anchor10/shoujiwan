@@ -1,9 +1,9 @@
 // 头部导航
-$(function(){
-    $(".navigation").hover(function(){
+$(function () {
+    $(".navigation").hover(function () {
         $(".nav-list").show();
         $(this).addClass("hover");
-    },function(){
+    }, function () {
         $(".nav-list").hide();
         $(this).removeClass("hover");
     })
@@ -11,7 +11,7 @@ $(function(){
 
 
 // 截图查看大图
-$(function(){
+$(function () {
     $(".slideBox").slide({
         mainCell: "ul",
         autoPlay: false,
@@ -22,37 +22,34 @@ $(function(){
         pnLoop: false
     })
 })
-$(function(){
+$(function () {
     $('.boxer').fancybox({
-       closeClick : true,
-       prevEffect : 'none',
-       nextEffect : 'none',
-       afterLoad : function() {
-           this.title = (this.index + 1) + ' /' + this.group.length + (this.title ? ' - ' + this.title : '');
-       }
-   });
+        closeClick: true,
+        prevEffect: 'none',
+        nextEffect: 'none',
+        afterLoad: function () {
+            this.title = (this.index + 1) + ' /' + this.group.length + (this.title ? ' - ' + this.title : '');
+        }
+    });
 
 });
 
 // 返回顶部
-$(function(){
-    $(".go-top").on("click",function(){
-        $("html,body").animate({scrollTop:0},"slow");
+$(function () {
+    $(".go-top").on("click", function () {
+        $("html,body").animate({
+            scrollTop: 0
+        }, "slow");
     })
 })
 // 加入收藏 兼容360和IE6
-function shoucang(sTitle, sURL)
-{
-    try
-    {
+function shoucang(sTitle, sURL) {
+    try {
         window.external.addFavorite(sURL, sTitle);
-    } catch (e)
-    {
-        try
-        {
+    } catch (e) {
+        try {
             window.sidebar.addPanel(sTitle, sURL, "");
-        } catch (e)
-        {
+        } catch (e) {
             alert("加入收藏失败，请使用Ctrl+D进行添加");
         }
     }
